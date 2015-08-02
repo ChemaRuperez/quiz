@@ -69,6 +69,11 @@ exports.create = function(req, res) {
   ).catch(function(error){next(error)});
   };
 
+//GET /author
+exports.author = function(req, res){
+  res.render('author', {autor: 'Chema Rupérez', errors: []})
+};
+
 // GET /quizes/:id/edit
 exports.edit = function(req, res) {
   var quiz = req.quiz;  // req.quiz: autoload de instancia de quiz
